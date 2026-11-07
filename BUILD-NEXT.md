@@ -20,8 +20,6 @@ _Generated from `ledger.yaml` by `build/cv.js`. Don't edit by hand._
   - Needed: Probably Udemy: check My learning for the certificate (Q22).
 - **qual-team-leading-l2**: Level 2 Certificate in Team Leading
   - Needed: Find provider, year and certificate (Q23).
-- **test-please-delete**: Test -please delete
-  - Needed: Paul to confirm he can explain this in an interview
 
 ## On the CV but missing a public proof link
 
