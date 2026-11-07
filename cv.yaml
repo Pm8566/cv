@@ -12,8 +12,8 @@ headline: "Target role: AI Automation Engineer"
 # something Paul can defend in an interview. Never let AI rewrite it unchecked.
 profile: >-
   IT asset disposition (ITAD) Team Lead at Iron Mountain who designs and builds the tools
-  the team runs on. Self-taught Microsoft Excel and Power Query automations, built from
-  scratch and used daily across the team, have cut stock-take from a week to half a day
+  the team runs on. Self-taught Microsoft Excel, Power Query and Google Sheets tools,
+  built from scratch and used daily across the team, have cut stock-take from a week to half a day
   and sale-document preparation from an hour to minutes. Now moving into AI automation
   with foundations in Python, SQL and Snowflake, and running a self-hosted n8n automation
   server on Ubuntu. Nearly five years of hands-on ITAD operations bring a practical eye for which
@@ -37,8 +37,27 @@ roles:
     title: Warehouse Operative
     employer: Wisetek UK
     location: Milton Keynes
-    start: Nov 2021
+    start: Dec 2021
     end: Aug 2022
 
+  - id: self-employed
+    title: Freelance Blog Writer and Online Store Owner
+    employer: Self-employed
+    location: Milton Keynes
+    start: Mar 2021
+    end: Dec 2021
+  - id: head-waiter
+    title: Head Waiter
+    employer: Turtle Bay
+    location: Milton Keynes
+    start: Aug 2019
+    end: May 2021
+  - id: training-coordinator
+    title: Training Coordinator / Shift Leader
+    employer: Be At One
+    location: Milton Keynes
+    start: Sep 2016
+    end: Aug 2019
+
 education:
-  - GCSEs
+  - GCSEs including English and Maths

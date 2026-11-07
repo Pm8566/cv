@@ -7,18 +7,18 @@ Level rule: 1 piece of evidence = Working knowledge, 2–3 = Applied, 4+ = Profi
 | Skill | Evidence | Level | Proof types |
 |---|---|---|---|
 | Process automation | 5 | Proficient | reference |
-| Microsoft Excel | 4 | Proficient | reference, live_test |
-| IT hardware | 3 | Applied | reference |
+| IT hardware | 4 | Proficient | reference |
+| Microsoft Excel | 3 | Applied | reference, live_test |
+| Reporting | 3 | Applied | reference |
+| Secure data erasure | 3 | Applied | reference |
+| Team leadership | 3 | Applied | reference |
+| Google Sheets | 2 | Applied | reference |
 | Networking | 2 | Applied | reference |
 | Power Query | 2 | Applied | reference, live_test |
 | Python | 2 | Applied | cert |
-| Reporting | 2 | Applied | reference |
-| Secure data erasure | 2 | Applied | reference |
 | Snowflake | 2 | Applied | cert |
-| Team leadership | 2 | Applied | reference |
-| Data analysis | 1 | Working knowledge | course_record |
 | Human resources | 1 | Working knowledge | cert |
 | Linux | 1 | Working knowledge | work_artifact |
 | n8n | 1 | Working knowledge | work_artifact |
 | SQL | 1 | Working knowledge | live_test |
-| Training | 1 | Working knowledge | cert |
+| Training | 1 | Working knowledge | reference |

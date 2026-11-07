@@ -19,117 +19,184 @@
 - id: lead-team
   section: experience
   role: team-leader
-  skills: [Team leadership]
+  skills:
+  - Team leadership
   claim_text: Lead a team of 10 (expanding), allocating work across the ITAD process and resolving technical issues
   proof_type: reference
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
   status: on_cv
 
 - id: stocktake
   section: experience
   role: team-leader
-  skills: [Microsoft Excel, Process automation]
-  claim_text: Cut stock-take time from about a week to half a day by redesigning the process with Microsoft Excel automation
+  skills:
+  - Microsoft Excel
+  - Process automation
+  claim_text: Built an Excel tool reconciling system serial numbers against physical scans, cutting stock-take from about a week to half a day
   proof_type: reference
-  proof_url: ""
-  date_verified: 2026-11-05
+  proof_url: ''
+  date_verified: '2026-11-06'
   status: on_cv
 
 - id: process-tracker
   section: experience
   role: team-leader
-  skills: [Microsoft Excel, Process automation]
-  claim_text: Built an Excel process tracker giving the team live visibility of each job's stage across 10+ new jobs a week
+  skills:
+  - Google Sheets
+  - Process automation
+  - Reporting
+  claim_text: Built a shared Google Sheets tracker giving live status on 10+ new jobs a week against 20/25-day client turnaround targets; used daily by the whole team and by colleagues in Ireland
   proof_type: reference
-  proof_url: ""
-  date_verified: 2026-11-05
+  proof_url: ''
+  date_verified: '2026-11-06'
   status: on_cv
 
 - id: sale-docs
   section: experience
   role: team-leader
-  skills: [Power Query, Process automation]
+  skills:
+  - Power Query
+  - Process automation
   claim_text: Reduced sale-document preparation from about an hour to minutes using Power Query
   proof_type: reference
-  proof_url: ""
-  date_verified: 2026-11-05
+  proof_url: ''
+  date_verified: '2026-11-06'
   status: on_cv
 
 - id: stock-reports
   section: experience
   role: team-leader
-  skills: [Reporting, Microsoft Excel]
+  skills:
+  - Reporting
+  - Microsoft Excel
   claim_text: Produce ad hoc stock-level and location reports to support operational decisions
   proof_type: reference
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
   status: on_cv
 
 - id: self-taught-tools
   section: experience
   role: team-leader
-  skills: [Process automation]
-  claim_text: Designed and built all of these tools independently (self-taught); all remain in daily team use
+  skills:
+  - Process automation
+  claim_text: Designed and built these tools myself (self-taught); all are in daily team use, and I'm working on automating their remaining manual steps
   proof_type: reference
-  proof_url: ""
-  date_verified: 2026-11-05
+  proof_url: ''
+  date_verified: '2026-11-06'
   status: on_cv
+
+- id: extra-responsibilities
+  section: experience
+  role: team-leader
+  skills:
+  - Training
+  - Team leadership
+  claim_text: 'Additional responsibilities: key holder, Fire Warden, e-commerce test lead and trainer; ran health & safety inductions for new starters and train the team on new processes'
+  proof_type: reference
+  proof_url: ''
+  date_verified: '2026-11-06'
+  status: on_cv
+  note: Confirm these span both IT Technician and Team Lead roles (question bank Q5).
+
+- id: missing-item-investigation
+  section: experience
+  role: team-leader
+  skills:
+  - Problem solving
+  claim_text: Investigated a customer's missing-item claim on a sale, checking warehouse records and stock, and reported findings to the US sales team
+  proof_type: reference
+  proof_url: ''
+  date_verified: '2026-11-06'
+  status: pending_proof
+  note: Confirm which role this was in and have the outcome ready for interview (Q15).
 
 - id: data-wiping
   section: experience
   role: it-technician
-  skills: [Secure data erasure, IT hardware]
-  claim_text: Performed secure data wiping and functional testing of laptops and IT equipment for resale
+  skills:
+  - Secure data erasure
+  - IT hardware
+  claim_text: Tested, graded and securely wiped servers, desktops, laptops and storage devices
   proof_type: reference
-  proof_url: ""
-  date_verified: 2026-11-05
+  proof_url: ''
+  date_verified: '2026-11-06'
   status: on_cv
 
 - id: laptop-repair
   section: experience
   role: it-technician
-  skills: [IT hardware]
+  skills:
+  - IT hardware
   claim_text: Repaired and refurbished laptops, including screen, battery and keyboard replacement
   proof_type: reference
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
-  status: on_cv
+  status: pending_proof
+  note: Not confirmed in the 6 Nov fact-check (damaged units went to the refurb team). Paul to confirm he did screen/battery/keyboard repairs himself.
 
 - id: network-maintenance
   section: experience
   role: it-technician
-  skills: [Networking]
-  claim_text: Carried out general on-site network maintenance
+  skills:
+  - Networking
+  claim_text: Installed and maintained physical network cabling for wired and wireless access, including terminating RJ-45 connectors; first-line troubleshooting of connection faults, working with the network team in Ireland
   proof_type: reference
-  proof_url: ""
-  date_verified: 2026-11-05
+  proof_url: ''
+  date_verified: '2026-11-06'
   status: on_cv
 
-# ---- Skills section lines ----
+- id: onsite-erasure
+  section: experience
+  role: it-technician
+  skills:
+  - Secure data erasure
+  - IT hardware
+  claim_text: Delivered on-site data erasure and drive destruction at customer premises in the UK and abroad, including office decommissioning for return and resale
+  proof_type: reference
+  proof_url: ''
+  date_verified: '2026-11-06'
+  status: on_cv
+
+- id: warehouse-grading
+  section: experience
+  role: warehouse-operative
+  skills:
+  - IT hardware
+  claim_text: Inspected and graded returned IT devices, routing each to e-commerce resale, wholesale or the refurbishment team; packed and dispatched sales orders
+  proof_type: reference
+  proof_url: ''
+  date_verified: '2026-11-06'
+  status: on_cv
 
 - id: skill-excel
   section: skills
-  skills: [Microsoft Excel, Power Query]
-  claim_text: "Microsoft Excel (advanced, daily use): XLOOKUP, pivot tables, conditional formatting; Power Query (basic)"
+  skills:
+  - Microsoft Excel
+  - Power Query
+  claim_text: 'Microsoft Excel (advanced, daily use): XLOOKUP, pivot tables, conditional formatting; Power Query (basic)'
   proof_type: live_test
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
   status: on_cv
 
 - id: skill-process-automation
   section: skills
-  skills: [Process automation]
-  claim_text: "Process automation: Excel-based job tracking and document generation tools in live team use"
+  skills:
+  - Process automation
+  - Google Sheets
+  claim_text: 'Process automation: Microsoft Excel, Power Query and Google Sheets tools for stock-take, job tracking and sale documents, in daily team use'
   proof_type: reference
-  proof_url: ""
-  date_verified: 2026-11-05
+  proof_url: ''
+  date_verified: '2026-11-06'
   status: on_cv
 
 - id: skill-python
   section: skills
-  skills: [Python]
-  claim_text: "Python (foundational): pandas, NumPy, Matplotlib, Jupyter; working with reference notes"
+  skills:
+  - Python
+  claim_text: 'Python (foundational): pandas, NumPy, Matplotlib, Jupyter; working with reference notes'
   proof_type: cert
   proof_url: https://ude.my/UC-53bd73de-922f-471c-a9df-4aa35d9fd3a4
   date_verified: 2026-11-07
@@ -137,107 +204,123 @@
 
 - id: skill-sql
   section: skills
-  skills: [SQL]
-  claim_text: "SQL (foundational): SELECT, WHERE, GROUP BY; building towards joins and live timed practice"
+  skills:
+  - SQL
+  claim_text: 'SQL (foundational): SELECT, WHERE, GROUP BY; building towards joins and live timed practice'
   proof_type: live_test
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
   status: on_cv
   note: Project 2 (daily SQL practice) will add public proof
 
 - id: skill-snowflake
   section: skills
-  skills: [Snowflake]
-  claim_text: "Snowflake: Hands-On Essentials Badges 1 and 5"
+  skills:
+  - Snowflake
+  claim_text: 'Snowflake: Hands-On Essentials Badges 1 and 5'
   proof_type: cert
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
   status: on_cv
   note: Add the Credly badge links
 
 - id: skill-hardware
   section: skills
-  skills: [IT hardware, Secure data erasure, Networking]
-  claim_text: "IT hardware and networks: secure data erasure, diagnostics and testing, laptop component repair, network maintenance"
+  skills:
+  - IT hardware
+  - Secure data erasure
+  - Networking
+  claim_text: 'IT hardware and networks: secure data erasure and drive destruction, diagnostics and testing, physical network cabling'
   proof_type: reference
-  proof_url: ""
-  date_verified: 2026-11-05
+  proof_url: ''
+  date_verified: '2026-11-06'
   status: on_cv
 
 - id: skill-leadership
   section: skills
-  skills: [Team leadership, Reporting]
-  claim_text: "Leadership: team of 10, task allocation, operational and stock reporting"
+  skills:
+  - Team leadership
+  - Reporting
+  claim_text: 'Leadership: team of 10, task allocation, operational and stock reporting'
   proof_type: reference
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
   status: on_cv
 
 - id: skill-apps-script
   section: skills
-  skills: [Google Apps Script]
-  claim_text: "Google Apps Script: automations for team workflows"
+  skills:
+  - Google Apps Script
+  claim_text: 'Google Apps Script: automations for team workflows'
   proof_type: work_artifact
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
   status: pending_proof
   note: Do an Apps Script learning session so Paul can explain the scripts himself
 
-# ---- Projects ----
-
 - id: project-n8n-server
   section: projects
-  skills: [n8n, Linux]
-  claim_text: "Self-hosted n8n automation server on Ubuntu: running locally; GitHub write-up planned"
+  skills:
+  - n8n
+  - Linux
+  claim_text: 'Self-hosted n8n automation server on Ubuntu: running locally; GitHub write-up planned'
   proof_type: work_artifact
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
   status: on_cv
   note: A GitHub write-up would turn this into public proof
 
 - id: project-cv-as-code
   section: projects
-  skills: [Git and GitHub, Node.js, n8n, GitHub Actions]
-  claim_text: "CV-as-code: evidence ledger in YAML, Node.js renderer and an automated ATS test in GitHub Actions; new proof added from phone via an n8n form"
+  skills:
+  - Git and GitHub
+  - Node.js
+  - n8n
+  - GitHub Actions
+  claim_text: 'CV-as-code: evidence ledger in YAML, Node.js renderer and an automated ATS test in GitHub Actions; new proof added from phone via an n8n form'
   proof_type: github
   proof_url: https://github.com/Pm8566/cv
   date_verified: 2026-11-07
   status: removed
   note: Paul decided 7 Nov 2026 this is a personal tool, not a portfolio project. Never goes on the CV.
 
-# ---- Qualifications ----
-
 - id: qual-cipd
   section: qualifications
-  skills: [Human resources]
+  skills:
+  - Human resources
   claim_text: CIPD Level 3 Diploma in HR Practices
   proof_type: cert
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
   status: on_cv
+  note: Certificate at home; read the exact year off it (~2019).
 
 - id: qual-education-training
   section: qualifications
-  skills: [Training]
+  skills:
+  - Training
   claim_text: Level 3 Award in Education and Training
   proof_type: cert
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
-  status: on_cv
+  status: pending_proof
+  note: Done at Be At One (2016-2019); certificate likely lost. Check the gov.uk Personal Learning Record or ask the awarding body.
 
 - id: qual-snowflake
   section: qualifications
-  skills: [Snowflake]
+  skills:
+  - Snowflake
   claim_text: Snowflake Hands-On Essentials Badges 1 and 5
   proof_type: cert
-  proof_url: ""
+  proof_url: ''
   date_verified: 2026-11-05
   status: on_cv
   note: Add the Credly badge links
 
 - id: qual-python-bootcamp
   section: qualifications
-  skills: [Python]
+  skills:
+  - Python
   claim_text: Python for Data Science and Machine Learning Bootcamp, Jose Portilla, Udemy (completed)
   proof_type: cert
   proof_url: https://ude.my/UC-53bd73de-922f-471c-a9df-4aa35d9fd3a4
@@ -246,9 +329,55 @@
 
 - id: qual-data-analyst-bootcamp
   section: qualifications
-  skills: [Data analysis]
+  skills:
+  - Data analysis
   claim_text: Complete Data Analyst Bootcamp, Krish Naik, Udemy (in progress)
   proof_type: course_record
-  proof_url: ""
-  date_verified: 2026-11-05
-  status: on_cv
+  proof_url: ''
+  date_verified: '2026-11-06'
+  status: pending_proof
+  note: Restarted to take full notes (4% on 6 Nov). Back on the CV once Paul has finished a section he can talk about.
+
+- id: qual-cyber-l2
+  section: qualifications
+  skills:
+  - Cyber security
+  claim_text: Level 2 Certificate in Principles of Cyber Security
+  proof_type: cert
+  proof_url: ''
+  date_verified: '2026-11-06'
+  status: pending_proof
+  note: Find provider, year and certificate (Q20).
+
+- id: qual-coding-l2
+  section: qualifications
+  skills:
+  - Programming
+  claim_text: Level 2 Certificate in Understanding Coding
+  proof_type: cert
+  proof_url: ''
+  date_verified: '2026-11-06'
+  status: pending_proof
+  note: Find provider, year and certificate (Q21).
+
+- id: qual-sql-fundamentals
+  section: qualifications
+  skills:
+  - SQL
+  claim_text: SQL Programming Fundamentals
+  proof_type: cert
+  proof_url: ''
+  date_verified: '2026-11-06'
+  status: pending_proof
+  note: 'Probably Udemy: check My learning for the certificate (Q22).'
+
+- id: qual-team-leading-l2
+  section: qualifications
+  skills:
+  - Training
+  claim_text: Level 2 Certificate in Team Leading
+  proof_type: cert
+  proof_url: ''
+  date_verified: '2026-11-06'
+  status: pending_proof
+  note: Find provider, year and certificate (Q23).
