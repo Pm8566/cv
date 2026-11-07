@@ -11,7 +11,7 @@ headline: "Target role: AI Automation Engineer"
 # Written and approved by Paul (CV v1, 5 Nov 2026). Any change here must be
 # something Paul can defend in an interview. Never let AI rewrite it unchecked.
 profile: >-
-  IT asset disposition (ITAD) Team Leader at Iron Mountain who designs and builds the tools
+  IT asset disposition (ITAD) Team Lead at Iron Mountain who designs and builds the tools
   the team runs on. Self-taught Microsoft Excel and Power Query automations, built from
   scratch and used daily across the team, have cut stock-take from a week to half a day
   and sale-document preparation from an hour to minutes. Now moving into AI automation
@@ -22,7 +22,7 @@ profile: >-
 # Roles, newest first. Bullets come from ledger.yaml (section: experience, role: <id>).
 roles:
   - id: team-leader
-    title: ITAD Team Leader
+    title: Team Lead
     employer: Iron Mountain (formerly Wisetek UK)
     location: Milton Keynes
     start: Apr 2026
