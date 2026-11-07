@@ -129,12 +129,11 @@
   role: it-technician
   skills:
   - IT hardware
-  claim_text: Repaired and refurbished laptops, including screen, battery and keyboard replacement
+  claim_text: Ran laptop refurbishment, including replacing screens and other faulty components
   proof_type: reference
   proof_url: ''
-  date_verified: 2026-11-05
-  status: pending_proof
-  note: Not confirmed in the 6 Nov fact-check (damaged units went to the refurb team). Paul to confirm he did screen/battery/keyboard repairs himself.
+  date_verified: 2026-11-07
+  status: on_cv
 
 - id: network-maintenance
   section: experience
@@ -230,7 +229,7 @@
   - IT hardware
   - Secure data erasure
   - Networking
-  claim_text: 'IT hardware and networks: secure data erasure and drive destruction, diagnostics and testing, physical network cabling'
+  claim_text: 'IT hardware and networks: secure data erasure and drive destruction, diagnostics and testing, laptop refurbishment, physical network cabling'
   proof_type: reference
   proof_url: ''
   date_verified: '2026-11-06'

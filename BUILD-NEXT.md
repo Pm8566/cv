@@ -6,8 +6,6 @@ _Generated from `ledger.yaml` by `build/cv.js`. Don't edit by hand._
 
 - **missing-item-investigation**: Investigated a customer's missing-item claim on a sale, checking warehouse records and stock, and reported findings to the US sales team
   - Needed: Confirm which role this was in and have the outcome ready for interview (Q15).
-- **laptop-repair**: Repaired and refurbished laptops, including screen, battery and keyboard replacement
-  - Needed: Not confirmed in the 6 Nov fact-check (damaged units went to the refurb team). Paul to confirm he did screen/battery/keyboard repairs himself.
 - **skill-apps-script**: Google Apps Script: automations for team workflows
   - Needed: Do an Apps Script learning session so Paul can explain the scripts himself
 - **qual-education-training**: Level 3 Award in Education and Training

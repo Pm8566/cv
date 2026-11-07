@@ -27,8 +27,7 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq --no-install-recommends libreoffice-writer poppler-utils >/dev/null
 
-      # Phone and email live only in repo secrets. The built file is NOT uploaded as an
-      # artifact, because artifacts on a public repo can be downloaded by anyone.
+      # Phone and email live only in repo secrets.
       - name: Build CV
         env:
           CV_PHONE: ${{ secrets.CV_PHONE }}
@@ -40,3 +39,17 @@ jobs:
 
       - name: Generated files are up to date
         run: git diff --exit-code SKILLS.md BUILD-NEXT.md
+
+      # Downloadable CV (e.g. from a phone). ONLY while the repo is private:
+      # artifacts on a public repo can be downloaded by anyone, and this file
+      # contains phone + email. The `if` switches it off automatically if the
+      # repo is ever made public.
+      - name: Upload CV (private repo only)
+        if: ${{ github.event.repository.private }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Paul-Martin-CV
+          path: |
+            out/Paul-Martin-CV.docx
+            out/Paul-Martin-CV.pdf
+          retention-days: 30
