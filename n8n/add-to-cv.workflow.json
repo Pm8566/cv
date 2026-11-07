@@ -1,0 +1,65 @@
+{
+  "id": "cvAddToCvForm01",
+  "name": "CV: Add to my CV (form)",
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "nodes": [
+    {
+      "id": "6a0d1b52-1c1e-4b7e-9d1a-0c5f1e2a7b01",
+      "name": "Add to my CV form",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [0, 0],
+      "webhookId": "2f9c4e7a-5b3d-4c1e-8a6f-add2cv000001",
+      "parameters": {
+        "formTitle": "Add to my CV",
+        "formDescription": "One claim per submission. It only goes on the CV if the proof is in place and you can explain it in an interview. Otherwise it waits on the build-next list.",
+        "formFields": {
+          "values": [
+            { "fieldLabel": "Claim (exact CV wording)", "fieldType": "textarea", "placeholder": "e.g. Built an n8n workflow that ...", "requiredField": true },
+            { "fieldLabel": "Section", "fieldType": "dropdown", "requiredField": true,
+              "fieldOptions": { "values": [ { "option": "Projects" }, { "option": "Skills" }, { "option": "Qualifications" }, { "option": "Experience (current role)" } ] } },
+            { "fieldLabel": "Skills it proves (comma-separated)", "placeholder": "e.g. SQL, Python", "requiredField": true },
+            { "fieldLabel": "Proof type", "fieldType": "dropdown", "requiredField": true,
+              "fieldOptions": { "values": [ { "option": "GitHub repo or commit" }, { "option": "Certificate" }, { "option": "Manager / employer reference" }, { "option": "Work example I can show" }, { "option": "I can demo it live" }, { "option": "Course progress page" } ] } },
+            { "fieldLabel": "Proof link", "placeholder": "https://... (needed for GitHub and certificates)" },
+            { "fieldLabel": "Can you explain this in an interview without notes?", "fieldType": "dropdown", "requiredField": true,
+              "fieldOptions": { "values": [ { "option": "Yes" }, { "option": "Not yet" } ] } }
+          ]
+        },
+        "responseMode": "onReceived",
+        "options": {
+          "path": "add-to-cv",
+          "respondWithOptions": { "values": { "formSubmittedText": "Got it. Your CV will rebuild within 5 minutes and you'll get a notification." } }
+        }
+      }
+    },
+    {
+      "id": "6a0d1b52-1c1e-4b7e-9d1a-0c5f1e2a7b02",
+      "name": "Make inbox file",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [240, 0],
+      "parameters": {
+        "jsCode": "// Turn the form answers into the JSON file the laptop sync job reads.\nconst f = $input.first().json;\nconst entry = {\n  claim_text: f['Claim (exact CV wording)'],\n  section: f['Section'],\n  skills: f['Skills it proves (comma-separated)'],\n  proof_type: f['Proof type'],\n  proof_url: f['Proof link'] || '',\n  can_explain: f['Can you explain this in an interview without notes?'],\n  submitted_at: f.submittedAt || new Date().toISOString(),\n};\nconst fileName = `entry-${Date.now()}.json`;\nreturn [{\n  json: { ...entry, fileName },\n  binary: { data: { data: Buffer.from(JSON.stringify(entry, null, 2)).toString('base64'), mimeType: 'application/json', fileName, fileExtension: 'json' } },\n}];"
+      }
+    },
+    {
+      "id": "6a0d1b52-1c1e-4b7e-9d1a-0c5f1e2a7b03",
+      "name": "Save to inbox",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [480, 0],
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/files/cv/inbox/{{ $json.fileName }}",
+        "dataPropertyName": "data",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Add to my CV form": { "main": [[ { "node": "Make inbox file", "type": "main", "index": 0 } ]] },
+    "Make inbox file": { "main": [[ { "node": "Save to inbox", "type": "main", "index": 0 } ]] }
+  }
+}

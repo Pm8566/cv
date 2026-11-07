@@ -7,10 +7,10 @@
 # Run by hand with: bash ~/projects/cv/scripts/cv-sync.sh --rebuild
 set -uo pipefail
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin"
-REPO="$HOME/projects/cv"
-BASE="$HOME/n8n/local-files/cv"
+REPO="${CV_REPO:-$HOME/projects/cv}"
+BASE="${CV_BASE:-$HOME/n8n/local-files/cv}"
 INBOX="$BASE/inbox"; DONE="$BASE/processed"; FAILED="$BASE/failed"; OUTDIR="$BASE/out"
-NTFY_TOPIC_FILE="$HOME/n8n/.ntfy-topic"
+NTFY_TOPIC_FILE="${CV_NTFY_FILE:-$HOME/n8n/.ntfy-topic}"
 mkdir -p "$INBOX" "$DONE" "$FAILED" "$OUTDIR"
 
 shopt -s nullglob
@@ -37,7 +37,7 @@ fail() {
 }
 
 cd "$REPO" || fail "repo folder missing"
-git pull --rebase --quiet || fail "git pull failed"
+git pull --rebase --autostash --quiet || fail "git pull failed"
 added=""
 if [ ${#files[@]} -gt 0 ]; then
   added=$(node scripts/add-from-inbox.js "${files[@]}") || fail "a form entry was invalid"
