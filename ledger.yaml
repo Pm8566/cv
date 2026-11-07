@@ -1,0 +1,256 @@
+# Evidence ledger: one entry per CV claim.
+# The CV only shows entries with status: on_cv. Everything else is listed in BUILD-NEXT.md.
+#
+# Fields
+#   id            short unique name
+#   section       experience | skills | projects | qualifications
+#   role          (experience only) which role in cv.yaml the bullet belongs to
+#   skills        tags this claim is evidence for (used to count evidence per skill)
+#   claim_text    the exact wording that appears on the CV
+#   proof_type    github | cert | reference | work_artifact | live_test | course_record
+#   proof_url     link to the proof (blank if there is no public link yet)
+#   date_verified when Paul last confirmed the claim is true (YYYY-MM-DD)
+#   status        on_cv | pending_proof | removed
+#   note          (optional) why it's pending / what's needed
+#
+# Rule: Paul must be able to answer interview questions about every on_cv claim.
+# New entries are appended at the bottom by the n8n "Add to my CV" form.
+
+- id: lead-team
+  section: experience
+  role: team-leader
+  skills: [Team leadership]
+  claim_text: Lead a team of 10 (expanding), allocating work across the ITAD process and resolving technical issues
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: stocktake
+  section: experience
+  role: team-leader
+  skills: [Microsoft Excel, Process automation]
+  claim_text: Cut stock-take time from about a week to half a day by redesigning the process with Microsoft Excel automation
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: process-tracker
+  section: experience
+  role: team-leader
+  skills: [Microsoft Excel, Process automation]
+  claim_text: Built an Excel process tracker giving the team live visibility of each job's stage across 10+ new jobs a week
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: sale-docs
+  section: experience
+  role: team-leader
+  skills: [Power Query, Process automation]
+  claim_text: Reduced sale-document preparation from about an hour to minutes using Power Query
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: stock-reports
+  section: experience
+  role: team-leader
+  skills: [Reporting, Microsoft Excel]
+  claim_text: Produce ad hoc stock-level and location reports to support operational decisions
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: self-taught-tools
+  section: experience
+  role: team-leader
+  skills: [Process automation]
+  claim_text: Designed and built all of these tools independently (self-taught); all remain in daily team use
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: data-wiping
+  section: experience
+  role: it-technician
+  skills: [Secure data erasure, IT hardware]
+  claim_text: Performed secure data wiping and functional testing of laptops and IT equipment for resale
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: laptop-repair
+  section: experience
+  role: it-technician
+  skills: [IT hardware]
+  claim_text: Repaired and refurbished laptops, including screen, battery and keyboard replacement
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: network-maintenance
+  section: experience
+  role: it-technician
+  skills: [Networking]
+  claim_text: Carried out general on-site network maintenance
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+# ---- Skills section lines ----
+
+- id: skill-excel
+  section: skills
+  skills: [Microsoft Excel, Power Query]
+  claim_text: "Microsoft Excel (advanced, daily use): XLOOKUP, pivot tables, conditional formatting; Power Query (basic)"
+  proof_type: live_test
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: skill-process-automation
+  section: skills
+  skills: [Process automation]
+  claim_text: "Process automation: Excel-based job tracking and document generation tools in live team use"
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: skill-python
+  section: skills
+  skills: [Python]
+  claim_text: "Python (foundational): pandas, NumPy, Matplotlib, Jupyter; working with reference notes"
+  proof_type: cert
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+  note: Add the Udemy certificate link
+
+- id: skill-sql
+  section: skills
+  skills: [SQL]
+  claim_text: "SQL (foundational): SELECT, WHERE, GROUP BY; building towards joins and live timed practice"
+  proof_type: live_test
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+  note: Project 2 (daily SQL practice) will add public proof
+
+- id: skill-snowflake
+  section: skills
+  skills: [Snowflake]
+  claim_text: "Snowflake: Hands-On Essentials Badges 1 and 5"
+  proof_type: cert
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+  note: Add the Credly badge links
+
+- id: skill-hardware
+  section: skills
+  skills: [IT hardware, Secure data erasure, Networking]
+  claim_text: "IT hardware and networks: secure data erasure, diagnostics and testing, laptop component repair, network maintenance"
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: skill-leadership
+  section: skills
+  skills: [Team leadership, Reporting]
+  claim_text: "Leadership: team of 10, task allocation, operational and stock reporting"
+  proof_type: reference
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: skill-apps-script
+  section: skills
+  skills: [Google Apps Script]
+  claim_text: "Google Apps Script: automations for team workflows"
+  proof_type: work_artifact
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: pending_proof
+  note: Do an Apps Script learning session so Paul can explain the scripts himself
+
+# ---- Projects ----
+
+- id: project-n8n-server
+  section: projects
+  skills: [n8n, Linux]
+  claim_text: "Self-hosted n8n automation server on Ubuntu: running locally; GitHub write-up planned"
+  proof_type: work_artifact
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+  note: A GitHub write-up would turn this into public proof
+
+- id: project-cv-as-code
+  section: projects
+  skills: [Git and GitHub, Node.js, n8n, GitHub Actions]
+  claim_text: "CV-as-code: evidence ledger in YAML, Node.js renderer and an automated ATS test in GitHub Actions; new proof added from phone via an n8n form"
+  proof_type: github
+  proof_url: https://github.com/Pm8566/cv
+  date_verified: 2026-11-07
+  status: pending_proof
+  note: Built by Claude on 7 Nov 2026. Paul walks through the code and can explain it before this goes on the CV
+
+# ---- Qualifications ----
+
+- id: qual-cipd
+  section: qualifications
+  skills: [Human resources]
+  claim_text: CIPD Level 3 Diploma in HR Practices
+  proof_type: cert
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: qual-education-training
+  section: qualifications
+  skills: [Training]
+  claim_text: Level 3 Award in Education and Training
+  proof_type: cert
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+
+- id: qual-snowflake
+  section: qualifications
+  skills: [Snowflake]
+  claim_text: Snowflake Hands-On Essentials Badges 1 and 5
+  proof_type: cert
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+  note: Add the Credly badge links
+
+- id: qual-python-bootcamp
+  section: qualifications
+  skills: [Python]
+  claim_text: Python for Data Science and Machine Learning Bootcamp, Jose Portilla, Udemy (completed)
+  proof_type: cert
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv
+  note: Add the certificate link
+
+- id: qual-data-analyst-bootcamp
+  section: qualifications
+  skills: [Data analysis]
+  claim_text: Complete Data Analyst Bootcamp, Krish Naik, Udemy (in progress)
+  proof_type: course_record
+  proof_url: ""
+  date_verified: 2026-11-05
+  status: on_cv

@@ -1,0 +1,44 @@
+# Fixed parts of the CV (not individual claims).
+# Phone and email are NOT here on purpose: they come from GitHub secrets
+# (CV_PHONE, CV_EMAIL) in CI, and from ~/.config/cv/contact.env on the laptop.
+name: Paul Martin
+location: Milton Keynes, UK
+links:
+  - linkedin.com/in/pm8566
+  - github.com/Pm8566
+headline: "Target role: AI Automation Engineer"
+
+# Written and approved by Paul (CV v1, 5 Nov 2026). Any change here must be
+# something Paul can defend in an interview. Never let AI rewrite it unchecked.
+profile: >-
+  IT asset disposition (ITAD) Team Leader at Iron Mountain who designs and builds the tools
+  the team runs on. Self-taught Microsoft Excel and Power Query automations, built from
+  scratch and used daily across the team, have cut stock-take from a week to half a day
+  and sale-document preparation from an hour to minutes. Now moving into AI automation
+  with foundations in Python, SQL and Snowflake, and running a self-hosted n8n automation
+  server on Ubuntu. Five years of hands-on ITAD operations bring a practical eye for which
+  manual processes are worth automating.
+
+# Roles, newest first. Bullets come from ledger.yaml (section: experience, role: <id>).
+roles:
+  - id: team-leader
+    title: ITAD Team Leader
+    employer: Iron Mountain (formerly Wisetek UK)
+    location: Milton Keynes
+    start: Apr 2026
+    end: Present
+  - id: it-technician
+    title: IT Technician
+    employer: Wisetek UK (acquired by Iron Mountain, 2025)
+    location: Milton Keynes
+    start: Aug 2022
+    end: Apr 2026
+  - id: warehouse-operative
+    title: Warehouse Operative
+    employer: Wisetek UK
+    location: Milton Keynes
+    start: Nov 2021
+    end: Aug 2022
+
+education:
+  - GCSEs

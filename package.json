@@ -1,0 +1,18 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node build/cv.js",
+    "ats": "node build/ats-check.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "docx": "^9.15.3",
+    "js-yaml": "^4.3.2",
+    "jszip": "^3.10.2"
+  },
+  "private": true
+}
