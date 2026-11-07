@@ -380,3 +380,14 @@
   date_verified: '2026-11-06'
   status: pending_proof
   note: Find provider, year and certificate (Q23).
+
+- id: test-please-delete
+  section: experience
+  role: team-leader
+  skills: [Testing]
+  claim_text: Test -please delete
+  proof_type: course_record
+  proof_url: ''
+  date_verified: 2026-11-07
+  status: pending_proof
+  note: Paul to confirm he can explain this in an interview
