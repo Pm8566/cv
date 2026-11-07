@@ -131,10 +131,9 @@
   skills: [Python]
   claim_text: "Python (foundational): pandas, NumPy, Matplotlib, Jupyter; working with reference notes"
   proof_type: cert
-  proof_url: ""
-  date_verified: 2026-11-05
+  proof_url: https://ude.my/UC-53bd73de-922f-471c-a9df-4aa35d9fd3a4
+  date_verified: 2026-11-07
   status: on_cv
-  note: Add the Udemy certificate link
 
 - id: skill-sql
   section: skills
@@ -203,8 +202,8 @@
   proof_type: github
   proof_url: https://github.com/Pm8566/cv
   date_verified: 2026-11-07
-  status: pending_proof
-  note: Built by Claude on 7 Nov 2026. Paul walks through the code and can explain it before this goes on the CV
+  status: removed
+  note: Paul decided 7 Nov 2026 this is a personal tool, not a portfolio project. Never goes on the CV.
 
 # ---- Qualifications ----
 
@@ -241,10 +240,9 @@
   skills: [Python]
   claim_text: Python for Data Science and Machine Learning Bootcamp, Jose Portilla, Udemy (completed)
   proof_type: cert
-  proof_url: ""
-  date_verified: 2026-11-05
+  proof_url: https://ude.my/UC-53bd73de-922f-471c-a9df-4aa35d9fd3a4
+  date_verified: 2026-11-07
   status: on_cv
-  note: Add the certificate link
 
 - id: qual-data-analyst-bootcamp
   section: qualifications

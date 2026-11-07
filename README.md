@@ -31,5 +31,5 @@ npm run ats
 
 ## Honesty notes
 
-- Built 7 Nov 2026. Version 1 of the code was written with Claude (AI); I'm working through it so I can explain every part. Until then this project itself stays off my CV (see BUILD-NEXT).
+- This repo is a personal tool, not a portfolio project, so it never appears on my CV. Version 1 of the code was written with Claude (AI).
 - Work achievements at Iron Mountain can't be shared publicly, so their proof is a manager reference.
