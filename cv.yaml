@@ -15,8 +15,8 @@ profile: >-
   the team runs on. Self-taught Microsoft Excel, Power Query and Google Sheets tools,
   built from scratch and used daily across the team, have cut stock-take from a week to half a day
   and sale-document preparation from an hour to minutes. Now moving into AI automation
-  with foundations in Python, SQL and Snowflake, and running a self-hosted n8n automation
-  server on Ubuntu. Nearly five years of hands-on ITAD operations bring a practical eye for which
+  with foundations in Python, SQL and Snowflake, running a self-hosted n8n automation
+  server on Ubuntu and building an automated SQL practice tool with Python and GitHub Actions. Nearly five years of hands-on ITAD operations bring a practical eye for which
   manual processes are worth automating.
 
 # Roles, newest first. Bullets come from ledger.yaml (section: experience, role: <id>).

@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const yaml = require("js-yaml");
 const {
-  Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, LevelFormat,
+  Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, LevelFormat, BorderStyle,
 } = require("docx");
 
 const ROOT = path.join(__dirname, "..");
@@ -45,21 +45,32 @@ const pending = ledger.filter((c) => c.status === "pending_proof");
 const inSection = (s) => onCv.filter((c) => c.section === s);
 
 // ---------- 2. The .docx (ATS-friendly: one column, no tables/images, real headings) ----------
+// Design rules (Paul, 10 Nov 2026) - keep these on every rebuild:
+//  - Accent colour on name + section headings, thin rule under each heading (ATS-safe: colour/borders are ignored by parsers)
+//  - Contact details on one line, links on their own line (no awkward wrapping)
+//  - Section order: Profile, Experience, Projects, Skills, Qualifications, Education
+//  - Still one column, no tables, images, icons or skill bars
 const FONT = "Calibri";
+const ACCENT = "1F3864";
 const run = (text, opts = {}) => new TextRun({ text, font: FONT, ...opts });
-const heading = (text) => new Paragraph({ heading: HeadingLevel.HEADING_1, children: [run(text)] });
+const heading = (text) => new Paragraph({
+  heading: HeadingLevel.HEADING_1, children: [run(text)],
+  border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: ACCENT, space: 1 } },
+});
 const bullet = (text) => new Paragraph({ numbering: { reference: "bullets", level: 0 }, children: [run(text)] });
 const plain = (children, extra = {}) => new Paragraph({ children, ...extra });
 
 const phone = (process.env.CV_PHONE || "").trim();
 const email = (process.env.CV_EMAIL || "").trim();
 if (!phone || !email) console.warn("WARNING: CV_PHONE / CV_EMAIL not set — contact details left out of this build.");
-const contactLine = [cv.location, phone, email, ...cv.links].filter(Boolean).join(" | ");
+const contactLine = [cv.location, phone, email].filter(Boolean).join(" | ");
+const linksLine = (cv.links || []).filter(Boolean).join(" | ");
 
 const body = [];
-body.push(plain([run(cv.name, { bold: true, size: 32 })], { alignment: AlignmentType.CENTER }));
+body.push(plain([run(cv.name, { bold: true, size: 36, color: ACCENT })], { alignment: AlignmentType.CENTER }));
 body.push(plain([run(contactLine, { size: 20 })], { alignment: AlignmentType.CENTER }));
-body.push(plain([run(cv.headline, { bold: true })], { alignment: AlignmentType.CENTER, spacing: { after: 120 } }));
+if (linksLine) body.push(plain([run(linksLine, { size: 20 })], { alignment: AlignmentType.CENTER }));
+body.push(plain([run(cv.headline, { bold: true, color: ACCENT })], { alignment: AlignmentType.CENTER, spacing: { after: 120 } }));
 
 body.push(heading("Profile"));
 body.push(plain([run(cv.profile.replace(/\s+/g, " ").trim())]));
@@ -73,13 +84,13 @@ for (const role of cv.roles) {
   inSection("experience").filter((c) => c.role === role.id).forEach((c) => body.push(bullet(c.claim_text)));
 }
 
-if (inSection("skills").length) {
-  body.push(heading("Skills"));
-  inSection("skills").forEach((c) => body.push(bullet(c.claim_text)));
-}
 if (inSection("projects").length) {
   body.push(heading("Projects"));
   inSection("projects").forEach((c) => body.push(bullet(c.claim_text + (c.proof_url ? ` (${c.proof_url.replace(/^https?:\/\//, "")})` : ""))));
+}
+if (inSection("skills").length) {
+  body.push(heading("Skills"));
+  inSection("skills").forEach((c) => body.push(bullet(c.claim_text)));
 }
 if (inSection("qualifications").length) {
   body.push(heading("Qualifications"));
@@ -95,7 +106,7 @@ const doc = new Document({
     default: { document: { run: { font: FONT, size: 20 }, paragraph: { spacing: { after: 20 } } } },
     paragraphStyles: [{
       id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true,
-      run: { font: FONT, size: 23, bold: true, color: "1F3864" },
+      run: { font: FONT, size: 23, bold: true, color: ACCENT },
       paragraph: { spacing: { before: 140, after: 40 }, outlineLevel: 0 },
     }],
   },

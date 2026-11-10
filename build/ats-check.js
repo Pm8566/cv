@@ -48,7 +48,7 @@ const paraText = (xml) => (xml.match(/<w:p[ >][\s\S]*?<\/w:p>/g) || [])
   contact.includes(cv.location) ? ok("location in contact line") : fail("location missing from contact line");
 
   // 4. Standard headings, in the expected order
-  const expected = ["Profile", "Experience", "Skills", "Projects", "Qualifications", "Education"];
+  const expected = ["Profile", "Experience", "Projects", "Skills", "Qualifications", "Education"];
   const found = lines.filter((l) => expected.includes(l));
   const order = expected.filter((h) => found.includes(h));
   JSON.stringify(found) === JSON.stringify(order) ? ok(`headings in order: ${found.join(" > ")}`) : fail(`headings out of order: ${found.join(" > ")}`);
