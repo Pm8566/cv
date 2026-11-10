@@ -85,7 +85,8 @@
   proof_type: reference
   proof_url: ''
   date_verified: '2026-11-06'
-  status: on_cv
+  status: removed
+  note: Removed 10 Nov 2026 (Paul) - repeats the profile; dead space on the CV.
 
 - id: extra-responsibilities
   section: experience

@@ -6,8 +6,8 @@ Level rule: 1 piece of evidence = Working knowledge, 2–3 = Applied, 4+ = Profi
 
 | Skill | Evidence | Level | Proof types |
 |---|---|---|---|
-| Process automation | 6 | Proficient | reference, github |
 | IT hardware | 5 | Proficient | reference |
+| Process automation | 5 | Proficient | reference, github |
 | Microsoft Excel | 3 | Applied | reference, live_test |
 | Python | 3 | Applied | cert, github |
 | Reporting | 3 | Applied | reference |
