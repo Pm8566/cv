@@ -22,9 +22,11 @@ flock -n 9 || exit 0
 exec >>"$BASE/sync.log" 2>&1
 echo "=== $(date '+%Y-%m-%d %H:%M:%S') ==="
 
-notify() {  # notify "title" "message"
+CV_URL="https://paul.tail1df33f.ts.net/cv.pdf"  # tailnet-only link to the latest PDF
+
+notify() {  # notify "title" "message" [click-url]
   [ -f "$NTFY_TOPIC_FILE" ] || return 0
-  curl -fsS --max-time 10 -H "Title: $1" -H "Tags: page_facing_up" -d "$2" \
+  curl -fsS --max-time 10 -H "Title: $1" -H "Tags: page_facing_up" ${3:+-H "Click: $3"} -d "$2" \
     "https://ntfy.sh/$(cat "$NTFY_TOPIC_FILE")" >/dev/null 2>&1 || true
 }
 
@@ -50,9 +52,12 @@ for f in "${files[@]}"; do mv "$f" "$DONE/"; done
 cp out/Paul-Martin-CV.docx out/Paul-Martin-CV.pdf "$OUTDIR/"
 git add ledger.yaml SKILLS.md BUILD-NEXT.md
 if ! git diff --cached --quiet; then
-  git commit -q -m "ledger: add ${added:-rebuild} (via n8n form)" || fail "git commit failed"
+  git commit -q -m "ledger: ${added:+add $added (via n8n form)}${added:-manual rebuild}" || fail "git commit failed"
   git push -q || fail "git push failed"
+  changed=1
 fi
 echo "OK: ${added:-rebuild only}"
-[ -n "$added" ] && notify "CV updated" "Added: $added. New CV in ~/n8n/local-files/cv/out"
+if [ -n "$added" ] || [ -n "${changed:-}" ]; then
+  notify "CV updated" "${added:+Added: $added. }Tap to open the latest CV (Tailscale on)." "$CV_URL"
+fi
 exit 0
