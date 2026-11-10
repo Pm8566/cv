@@ -380,3 +380,17 @@
   date_verified: '2026-11-06'
   status: pending_proof
   note: Find provider, year and certificate (Q23).
+
+- id: project-sql-phone-practice
+  section: projects
+  skills:
+  - SQL
+  - Python
+  - GitHub Actions
+  - Git and GitHub
+  - Process automation
+  claim_text: 'Automated SQL practice tool built with Python and GitHub Actions: posts a daily question as a GitHub Issue, marks replies automatically against hashed expected results, and logs every attempt'
+  proof_type: github
+  proof_url: https://github.com/Pm8566/sql-phone-practice
+  date_verified: '2026-11-10'
+  status: on_cv
