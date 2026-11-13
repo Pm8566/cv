@@ -16,8 +16,6 @@ _Generated from `ledger.yaml` by `build/cv.js`. Don't edit by hand._
   - Needed: Find provider, year and certificate (Q20).
 - **qual-coding-l2**: Level 2 Certificate in Understanding Coding
   - Needed: Find provider, year and certificate (Q21).
-- **qual-sql-fundamentals**: SQL Programming Fundamentals
-  - Needed: Probably Udemy: check My learning for the certificate (Q22).
 - **qual-team-leading-l2**: Level 2 Certificate in Team Leading
   - Needed: Find provider, year and certificate (Q23).
 

@@ -367,9 +367,9 @@
   claim_text: SQL Programming Fundamentals
   proof_type: cert
   proof_url: ''
-  date_verified: '2026-11-06'
-  status: pending_proof
-  note: 'Probably Udemy: check My learning for the certificate (Q22).'
+  date_verified: '2026-11-13'
+  status: removed
+  note: 'No proof found (checked Udemy and elsewhere, 13 Nov 2026). Removed; the sql-phone-practice repo is the proof of SQL instead.'
 
 - id: qual-team-leading-l2
   section: qualifications
