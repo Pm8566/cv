@@ -25,9 +25,7 @@ echo "=== $(date '+%Y-%m-%d %H:%M:%S') ==="
 CV_URL="https://paul.tail1df33f.ts.net/cv.pdf"  # tailnet-only link to the latest PDF
 
 notify() {  # notify "title" "message" [click-url]
-  [ -f "$NTFY_TOPIC_FILE" ] || return 0
-  curl -fsS --max-time 10 -H "Title: $1" -H "Tags: page_facing_up" ${3:+-H "Click: $3"} -d "$2" \
-    "https://ntfy.sh/$(cat "$NTFY_TOPIC_FILE")" >/dev/null 2>&1 || true
+  /home/paul/bin/notify laptop "$1" "$2" default page_facing_up "${3:-}" || true
 }
 
 fail() {
